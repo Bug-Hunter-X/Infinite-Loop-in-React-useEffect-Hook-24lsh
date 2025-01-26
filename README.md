@@ -1,0 +1,3 @@
+This repository demonstrates a common error in React's `useEffect` hook that leads to an infinite loop. The `MyComponent` attempts to increment the `count` state only when it's even, which creates a loop because updating the state triggers a re-render, causing the `useEffect` to execute again.
+
+The solution is shown in `bugSolution.js`, where the `count` update is done using a functional update to avoid the infinite loop.
